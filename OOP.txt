@@ -1,0 +1,266 @@
+1) https://github.com/rvsp/typescript-oops/blob/master/Practice/Movie.md
+-----CLASS MOVIE-------
+
+a) Write a constructor for the class Movie, which takes a String representing the title of the movie, a String representing the studio, 
+and a String representing the rating as its arguments, and sets the respective class properties to these values.
+
+class movie{
+    constructor(_title,_studio,_rating){
+        this.title = _title;
+        this.studio = _studio;
+        this.rating = _rating;
+    }
+}
+
+
+b) The constructor for the class Movie will set the class property rating to "PG" as default when no rating is provided.
+
+
+class movie{
+    constructor(_title,_studio,_rating){
+        this.title = _title;
+        this.studio = _studio;
+        if(_rating !== undefined){
+            this.rating = _rating;
+        }else{
+            this.rating = "PG";
+        }
+    }
+}
+
+
+
+
+d) Write a piece of code that creates an instance of the class Movie with the title “Casino Royale”, the studio “Eon Productions”, and the rating “PG­13”
+
+
+class movie{
+    constructor(_title,_studio,_rating){
+        this.title = _title;
+        this.studio = _studio;
+        if(_rating !== undefined){
+            this.rating = _rating;
+        }else{
+            this.rating = "PG";
+        }
+    }
+
+}
+
+var film1 = new movie("Casino Royale","Eon Productions","PG13");
+console.log(film1);
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2) https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
+---------Class - Circle--------------
+
+
+a) class circle{
+    constructor(_radius,_color){
+        this.radius = _radius;
+        this.color = _color;
+    }
+}
+
+let circle1 = new circle();
+
+
+b) class circle{
+    constructor(_radius,_color){
+        this.radius = _radius;
+        this.color = _color;
+    }
+}
+
+let circle1 = new circle(2);
+console.log(circle1);
+
+OUTPUT:
+circle { radius: 2, color: undefined }
+
+
+c) class circle{
+    constructor(_radius,_color){
+        this.radius = _radius;
+        this.color = _color;
+    }
+}
+
+let circle1 = new circle(2,"black");
+console.log(circle1);
+
+OUTPUT:
+circle { radius: 2, color: 'black' }
+
+
+d) class circle{
+    constructor(_radius,_color){
+        this.radius = _radius;
+        this.color = _color;
+    }
+    
+    get radi(){
+        return this.radius;
+    }
+}
+
+let circle1 = new circle(2,"black");
+console.log(circle1.radi);
+
+OUTPUT:
+2
+
+
+e)  class circle{
+    constructor(_radius,_color){
+        this.radius = _radius;
+        this.color = _color;
+    }
+    
+    get radi()
+    {
+        return this.radius;
+    }
+    
+    set radi(radi)
+    {
+        this.radius = radi;
+    }
+}
+
+let circle1 = new circle(2,"black");
+circle1.radi = 4;
+console.log(circle1.radius);
+
+OUTPUT:
+4
+
+
+f) class circle{
+    constructor(_radius,_color){
+        this.radius = _radius;
+        this.color = _color;
+    }
+    
+    get colr()
+    {
+        return this.color;
+    }
+    
+  
+}
+
+let circle1 = new circle(2,"black");
+console.log(circle1.colr);
+
+OUTPUT:
+black
+
+
+g) class circle{
+    constructor(_radius,_color){
+        this.radius = _radius;
+        this.color = _color;
+    }
+    
+    get colr()
+    {
+        return this.color;
+    }
+    
+    set colr(colr){
+        this.color = colr;
+    }
+    
+  
+}
+
+let circle1 = new circle(2,"black");
+circle1.colr = "red";
+console.log(circle1.colr);
+
+OUTPUT:
+red
+
+
+h) class circle{
+    constructor(_radius,_color){
+        this.radius = _radius;
+        this.color = _color;
+    }
+    
+    get area(){
+        return ((22/7) * (this.radius ** 2));
+    }
+    
+  
+}
+
+let circle1 = new circle(2,"black");
+console.log(circle1.area);
+
+OUTPUT:
+12.571428571428571
+
+
+i) class circle{
+    constructor(_radius,_color){
+        this.radius = _radius;
+        this.color = _color;
+    }
+    
+    get circumference(){
+        return (2 * (22/7) * (this.radius));
+    }
+    
+  
+}
+
+let circle1 = new circle(6,"black");
+console.log(circle1.circumference);
+
+OUTPUT:
+37.714285714285715
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+3) Write a “person” class to hold all the details.
+
+
+class person{
+    constructor(_name,_gender,_age,_height,_weight,_colour){
+        this.name = _name;
+        this.gender = _gender;
+        this.age = _age;
+        this.height = _height;
+        this.weight = _weight;
+        this.colour = _colour;
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------
+4) write a class to calculate uber price.
+
+
+class uber{
+    constructor(_distanceinKM){
+        this.distance = _distanceinKM;
+        this.priceperKM = 22;
+    }
+    
+    get pricecal(){
+        return (this.distance * this.priceperKM);
+    }
+}
+let customer1 = new uber(6);
+console.log(customer1.pricecal);
+
+OUTPUT:
+132
+
+
+
+
+
